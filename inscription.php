@@ -2,10 +2,11 @@
 /*
 Template Name: inscription
 */
-//get_header();
+    get_header();
 ?>
-
+<hr>
 <?php wp_register(); ?>
+<hr>
 <!--<h1>Créez un compte</h1>
 <div>
     <form method="post" action="http://webmmi.iut-tlse3.fr/~crn1624a/wordpress/wp-login.php" id="loginform" name="loginform">
@@ -26,4 +27,4 @@ Template Name: inscription
     </form>
 </div>-->
 
-<?php //get_footer(); ?>
+<?php get_footer(); ?>

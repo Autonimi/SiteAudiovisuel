@@ -2,28 +2,31 @@
 /*
 Template Name: connexion
 */
-//get_header();
+    get_header();
 ?>
 
 <?php //wp_login_form(); ?>
-<h1>Identifiez-vous</h1>
-<div>
-    <form method="post" action="http://webmmi.iut-tlse3.fr/~crn1624a/wordpress/wp-login.php" id="loginform" name="loginform">
-        <p>
-            <label for="user_login"><!--Identifiant--></label>
-            <input type="text" tabindex="10" size="20" value="" id="user_login" name="log" placeholder="Email">
-        </p>
-        <p>
-            <label for="user_pass"><!--Mot de passe--></label>
-            <input type="password" tabindex="20" size="20" value="" id="user_pass" name="pwd" placeholder="Mot de passe">
-        </p>
-        <p><label><input type="checkbox" tabindex="90" value="forever" id="rememberme" name="rememberme">Rester connecter</label>
-            <a href="http://webmmi.iut-tlse3.fr/~crn1624a/wordpress/wp-login.php?action=lostpassword">Mot de passe oublié</a></p>
-        <p>
-            <input type="submit" tabindex="100" value="Se connecter" id="wp-submit" name="wp-submit">
-            <input type="hidden" value="http://webmmi.iut-tlse3.fr/~crn1624a/wordpress" name="redirect_to">
-        </p>
-    </form>
-</div>
 
-<?php //get_footer(); ?>
+<?php
+    if ( ! is_user_logged_in() ) { // Display WordPress login form:
+        $args = array(
+            'redirect' => admin_url(), 
+            'form_id' => 'loginform-custom',
+            'label_username' => __( 'Email' ),
+            'label_password' => __( 'Mot de passe' ),
+            'label_remember' => __( 'Se souvenir de moi' ),
+            'label_log_in' => __( 'Se connecter' ),
+            'remember' => true
+        );
+        wp_login_form( $args );
+?>
+    <button href="<?php echo bloginfo( 'wpurl' );?>/wp-login.php?action=register" class="registerLink">Créer un compte</button>
+<?php
+    } else { // If logged in:
+        wp_loginout( home_url() ); // Display "Log Out" link.
+        echo " | ";
+        wp_register('', ''); // Display "Site Admin" link.
+    }
+?>
+
+<?php get_footer(); ?>
