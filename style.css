@@ -983,3 +983,52 @@ object {
 .gallery-caption {
 	display: block;
 }
+ /*TEST DE CONTACT AVEC WIDGET BAR A DROITE*/
+[id="main-contact"]
+ {
+	 display:flex;
+	 flex-wrap: wrap;
+ }
+ [id="main-contact"] > article 
+ {
+	flex-grow: 1;
+	flex-shrink: 1;
+	flex-basis: auto;
+	margin:2%;
+	border:solid 1px #1d1d1d;
+	border-radius: 5px;
+
+ }
+ [id="main-contact"] > article > header > h1
+ {
+ 	margin:2%;
+ }
+ [id="main-contact"] > article > div
+ {
+ 	margin:4%;
+ }
+ [id="main-contact"] > aside
+ {
+	flex-grow: 1;
+	flex-shrink: 1;
+	flex-basis: 200px; 
+	margin:2%;
+	border:solid 1px #1d1d1d;
+	border-radius: 3px;
+
+ }
+ [id="main-contact"] > aside > div
+ {
+	margin:1%;
+	border:solid 1px #1d1d1d;
+	border-radius: 3px;
+	flex:column;
+ }
+ [id="main-contact"] > aside > div > h2
+ {
+	text-align:center;
+ }
+ [id="main-contact"] > aside > div > div
+ {
+	margin:2%;
+ }
