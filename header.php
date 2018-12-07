@@ -56,7 +56,6 @@
 				'theme_location' => 'Top-categories',
 				'menu_id'        => 'top-categories',
 			) );
-			wp_enqueue_script( 'script-top-categories', get_template_directory_uri() . '/js/top-categories.js', array ( 'jquery' ), 1.0, true);
 			?>
 		</nav><!-- #site-navigation -->
 

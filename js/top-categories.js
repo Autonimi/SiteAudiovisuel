@@ -1,8 +1,8 @@
 (function($) {
 
-$('#top-categories a:first').addClass('active');
+$('#top-categories li:first').addClass('active');
 var tabs = $('#top-categories');
-var items = $('#top-categories').find('a').length;
+var items = $('#top-categories').find('li').length;
 var selector = $("#top-categories").prepend($("<div class='selector'></div"));
 var activeItem = tabs.find('.active');
 var activeWidth = activeItem.innerWidth();
@@ -11,8 +11,8 @@ $(".selector").css({
   "width": activeWidth + "px"
 });
 
-$("#top-categories").on("click","a",function(){
-  $('#top-categories a').removeClass("active");
+$("#top-categories li").click(function(){
+  $('#top-categories li').removeClass("active");
   $(this).addClass('active');
   var activeWidth = $(this).innerWidth();
   var itemPos = $(this).position();
