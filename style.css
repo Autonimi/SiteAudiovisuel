@@ -995,7 +995,7 @@ object {
 	flex-shrink: 1;
 	flex-basis: auto;
 	margin:2%;
-	border:solid 1px #1d1d1d;
+	border:solid 1px #919090;
 	border-radius: 5px;
 
  }
@@ -1013,14 +1013,14 @@ object {
 	flex-shrink: 1;
 	flex-basis: 200px; 
 	margin:2%;
-	border:solid 1px #1d1d1d;
+	border:solid 1px #919090;
 	border-radius: 3px;
 
  }
  [id="main-contact"] > aside > div
  {
 	margin:1%;
-	border:solid 1px #1d1d1d;
+	border:solid 1px #919090;
 	border-radius: 3px;
 	flex:column;
  }
