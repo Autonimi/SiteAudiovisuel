@@ -27,6 +27,8 @@
 				printf( esc_html__( 'Theme: %1$s by %2$s.', 'autonimi_theme' ), 'autonimi_theme', '<a href="http://underscores.me/">Underscores.me</a>' );
 				?>
 		</div><!-- .site-info -->
+		<script src="http://localhost/wordpress/wp-content/themes/SiteAudiovisuel/js/carousel.js"></script>
+		<script src="http://localhost/wordpress/wp-content/themes/SiteAudiovisuel/inc/OwlCarousel2-2.3.4/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 

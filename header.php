@@ -16,6 +16,13 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="http://localhost/wordpress/wp-content/themes/SiteAudiovisuel/moncss.css">
+	<link rel="stylesheet" href="http://localhost/wordpress/wp-content/themes/SiteAudiovisuel/inc/OwlCarousel2-2.3.4/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="http://localhost/wordpress/wp-content/themes/SiteAudiovisuel/inc/OwlCarousel2-2.3.4/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css">
+	<script src="http://localhost/wordpress/wp-content/themes/SiteAudiovisuel/js/single-Produit.js"></script>
+	<script src="http://localhost/wordpress/wp-content/themes/SiteAudiovisuel/js/carousel.js"></script>
+	<script src="http://localhost/wordpress/wp-content/themes/SiteAudiovisuel/inc/OwlCarousel2-2.3.4/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
 
 	<?php wp_head(); ?>
 </head>
