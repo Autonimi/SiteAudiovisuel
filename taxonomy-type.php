@@ -10,7 +10,7 @@ $tax_terms_type = get_terms($taxonomy_type, array('hide_empty' => false));
 $pattern='~^[\p{L}\p{Z}]+$~u'; //Uniquement ceux qui commence par une lettre
 ?>
 
-<form method="post" action="http://localhost/wordpress/type/ <?php echo $_POST['type']; ?>+<?php echo $_POST['prix']; ?>">
+<form method="post" action="http://localhost/wordpress/type/<?php echo $_POST['type']; ?>+<?php echo $_POST['prix']; ?>">
 <select name="prix" id="prix">
 <?php
 // La boucle d’affichage
