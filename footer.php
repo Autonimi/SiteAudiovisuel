@@ -14,6 +14,7 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer">
+	<h2>FOOTER.PHP</h2>
 		<div class="site-info">
 			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'autonimi_theme' ) ); ?>">
 				<?php
