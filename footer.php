@@ -28,6 +28,7 @@
 				printf( esc_html__( 'Theme: %1$s by %2$s.', 'autonimi_theme' ), 'autonimi_theme', '<a href="http://underscores.me/">Underscores.me</a>' );
 				?>
 		</div><!-- .site-info -->
+		
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
