@@ -1,4 +1,10 @@
 #colophon {
     background-color: #7E7E7E;
     color: white;
+    padding: 5%;
+}
+
+.copyright {
+    text-align: center;
+    font-size: 11px;
 }
