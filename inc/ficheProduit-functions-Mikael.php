@@ -56,8 +56,30 @@ register_post_type(
     'hierarchical' => true
     )
   );
+  //type de produits(casque,micro,caméra,appareil photo...)
+  register_taxonomy(
+    'prix',
+    'produit',
+    array(
+      'label' => 'Prix',
+      'labels' => array(
+      'name' => 'Prix',
+      'singular_name' => 'Prix',
+      'all_items' => 'Tous les prix',
+      'edit_item' => 'Éditer le prix',
+      'view_item' => 'Voir le prix',
+      'update_item' => 'Mettre à jour le prix',
+      'add_new_item' => 'Ajouter un intervale de prix',
+      'new_item_name' => 'Nouveau prix',
+      'search_items' => 'Rechercher parmi les prix',
+      'popular_items' => 'Prix les plus utilisés'
+    ),
+    'hierarchical' => true
+    )
+  );
   //Initialisation du type de produit
   register_taxonomy_for_object_type( 'type', 'produit' );
+  register_taxonomy_for_object_type( 'prix', 'produit' );
 
   
 
