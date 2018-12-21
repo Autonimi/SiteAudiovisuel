@@ -1,0 +1,102 @@
+.owl-item{
+    border: 1px groove grey;
+}
+
+.bordure{
+    border:solid;
+}
+
+.categorielinks a{
+    text-align: left;
+    font-size: 50%;
+}
+
+.content{
+    /*height: 10vh;
+    overflow: hidden;*/
+}
+
+.produit{
+    padding:0px;
+}
+
+.single-produit{
+    display:flex;
+}
+
+.produit img{
+    height:50%;
+}
+
+a{
+    text-decoration: none;
+}
+
+.produit .titles{
+    font-size: 100%;
+    text-align: center;
+}
+
+.produits{
+    margin-left:15%;
+}
+
+.title{
+    font-size: 2vw;
+}
+
+
+
+.produit a:link,.produit a:active{
+ color : black;
+}
+
+.produit a:visited{
+    color : black;
+}
+
+.produit a:hover{
+    text-decoration: underline;
+    color : rgb(109, 109, 109); 
+}
+
+.prix{
+    color: red;
+}
+
+.produit .prix{
+    text-align : right;
+}
+
+
+.box{
+    text-align: center;
+    width:20%;
+    display: inline-block;
+}
+
+.owl-stage-outer{
+    width: 80%;
+    margin-left: 20%;
+ }
+
+.owl-carousel{
+    overflow: hidden;
+}
+/*
+#container{
+    display:flex;
+}*/
+
+.owl-carousel .owl-item .wp-post-image {
+    width: 70%;
+    margin: auto;
+}
+
+#left{
+    width:100%;
+}
+
+#right{
+    width:100%;
+}
