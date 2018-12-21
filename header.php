@@ -37,22 +37,30 @@
 				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
 				<?php
 			endif;
-			$autonimi_theme_description = get_bloginfo( 'description', 'display' );
-			if ( $autonimi_theme_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $autonimi_theme_description; /* WPCS: xss ok. */ ?></p>
-			<?php endif; ?>
+			?>
 		</div><!-- .site-branding -->
 
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'autonimi_theme' ); ?></button>
+		<nav id="top-nav" class="top-nav">
 			<?php
 			wp_nav_menu( array(
-				'theme_location' => 'menu-1',
-				'menu_id'        => 'primary-menu',
+				'theme_location' => 'Top-compte',
+				'menu_id'        => 'top-compte',
+			) );
+
+			?>
+
+		</nav><!-- #site-navigation -->
+
+		<nav id="top-categories-nav" class="top-categories-nav">
+			<?php
+			
+			wp_nav_menu( array(
+				'theme_location' => 'Top-categories',
+				'menu_id'        => 'top-categories',
 			) );
 			?>
 		</nav><!-- #site-navigation -->
+
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">
