@@ -1,3 +1,7 @@
+(function($) {
+
+
+
 $(document).ready(function(){
     $("#myBigCarousel").owlCarousel(
         {
@@ -23,3 +27,5 @@ $(document).ready(function(){
         }
     );
 });
+
+})(jQuery);

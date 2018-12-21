@@ -1,3 +1,7 @@
+(function($) {
+
+
+
 $( document ).ready(function() {
     console.log("single-produit.js linked");
     let plus;
@@ -21,3 +25,5 @@ $('#minus').click(function(e){
     
 
 })
+
+})(jQuery);
