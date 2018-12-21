@@ -1,37 +1,44 @@
 <?php get_header(); ?>
 
+<h1>TAXONOMY-TYPE.php</h1>
 
 <?php
 // Récupérer la taxonomie dans une variable
 $taxonomy_type = 'type';
-$taxonomy_prix = 'prix';
 // Variable avec le get_terms
 $tax_terms_type = get_terms($taxonomy_type, array('hide_empty' => false));
-$tax_terms_prix = get_terms($taxonomy_prix, array('hide_empty' => false));
+$pattern='~^[\p{L}\p{Z}]+$~u'; //Uniquement ceux qui commence par une lettre
 ?>
 
-<select>
+<form method="post" action="http://localhost/wordpress/type/ <?php echo $_POST['type']; ?>+<?php echo $_POST['prix']; ?>">
+<select name="prix" id="prix">
 <?php
 // La boucle d’affichage
 foreach ($tax_terms_type as $tax_term_type) {
-echo '<option value=>' . '<a href="' . esc_attr(get_term_link($tax_term_type, $taxonomy_type)) . '" title="' . sprintf( __( "Voir tous les … in %s" ), $tax_term_type->name ) . '" ' . '>' . $tax_term_type->name.'</a> </li>';
+    $typename =  $tax_term_type->name;
+    $success = preg_match($pattern,$typename);
+    if(!$success){
+        echo '<option value="'.$typename.'">'.$typename.'</option>';    }
 }
 ?>
+
 </select>
 
-<select>
+<select name="type" id="type">
 <?php
 // La boucle d’affichage
-foreach ($tax_terms_prix as $tax_term_prix) {
-echo '<option value=>' . '<a href="' . esc_attr(get_term_link($tax_term_prix, $taxonomy_prix)) . '" title="' . sprintf( __( "Voir tous les … in %s" ), $tax_term_prix->name ) . '" ' . '>' . $tax_term_prix->name.'</a> </li>';
+foreach ($tax_terms_type as $tax_term_type) {
+    $typename =  $tax_term_type->name;
+    $success = preg_match($pattern,$typename);
+    if($success){
+echo '<option value="'.$typename.'">'.$typename.'</option>';
+    }
 }
 ?>
 </select>
 
-
-<h1>TAXONOMY-TYPE.php</h1>
-
-
+<input type="submit" value="Rechercher"/>
+</form>
 
 
 <div class="produits">
