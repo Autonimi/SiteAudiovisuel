@@ -13,5 +13,16 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 ?>
 
 <aside id="secondary" class="widget-area">
-	<?php dynamic_sidebar( 'sidebar-1' ); ?>
+	<nav>
+	<?php 
+	wp_nav_menu( array(
+				'theme_location' => 'Left-principale',
+				'menu_id'        => 'left-principale',
+			) );
+			?>
+	</nav>
+	<?php
+	//dynamic_sidebar( 'sidebar-1' );
+	?>
+	
 </aside><!-- #secondary -->
